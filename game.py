@@ -12,8 +12,9 @@ def guessing_game():
 
     while game_is_on:
         user_guess = int(input("Your guess? "))
-
-        if user_guess < computer_number:
+        if user_guess < 1 or user_guess > 100:
+            print("Hey bastard you enter a number that is not in the range a asked you! Try better next time.")
+        elif user_guess < computer_number:
             attempt += 1
             print("Your guess is too low, try again.\n")        
         elif user_guess > computer_number: 
